@@ -66,3 +66,22 @@ Portanto o form precisa direcionar para uma outra url. Essa ação que é usada 
 ```
 
 O helper articles_path diz ao rails para apontar para a forma padrão do URI pattern associada ao prefixo articles. 
+
+* Model
+
+Strong parameters (medidas de segurança)
+
+```
+@article = Article.new(params.require(:article).permit(:title, :text)) 
+```
+
+==
+
+```
+@article = Article.new(article_params)
+
+private
+	def article_params
+		params.require(:article).permit(:title, :text)
+	end
+```
