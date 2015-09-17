@@ -1,0 +1,21 @@
+<h1>Listing Click Datas</h1>
+ 
+<table class="table table-bordered">
+  <tr>
+    <th>ID</th>
+    <th>X</th>
+    <th>Y</th>
+    <th>User token</th>
+    <th>Scroll position</th>
+  </tr>
+ 
+  <% @clickdatas.each do |clickdata| %>
+    <tr>
+      <td><%= clickdata.id %></td>
+      <td><%= clickdata.x %></td>
+      <td><%= clickdata.y %></td>
+      <td><%= clickdata.user_token %></td>
+      <td><%= clickdata.scroll_position %></td>
+    </tr>
+  <% end %>
+</table>

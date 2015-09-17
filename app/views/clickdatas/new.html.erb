@@ -1,0 +1,25 @@
+<%= form_for :clickdata, url: clickdatas_path do |f| %>
+  <p>
+    <%= f.label :x %><br>
+    <%= f.text_field :x %>
+  </p>
+ 
+  <p> 
+    <%= f.label :y %><br>
+    <%= f.text_field :y %>
+  </p>
+
+  <p>
+    <%= f.label :user_token %><br>
+    <%= f.text_field :user_token %>
+  </p>
+
+  <p>
+    <%= f.label :scroll_position %><br>
+    <%= f.text_field :scroll_position %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

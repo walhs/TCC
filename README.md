@@ -85,3 +85,7 @@ private
 		params.require(:article).permit(:title, :text)
 	end
 ```
+
+* Simulating POST
+
+curl -X POST -d '{"x":"1", "y":"2", "user_token":"124abc", "scroll_position":"444"}' http://localhost:3000/clickdata --header "Content-Type:application/json"
