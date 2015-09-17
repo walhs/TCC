@@ -1,3 +1,26 @@
+# == Route Map
+#
+#         Prefix Verb   URI Pattern                    Controller#Action
+#       articles GET    /articles(.:format)            articles#index
+#                POST   /articles(.:format)            articles#create
+#    new_article GET    /articles/new(.:format)        articles#new
+#   edit_article GET    /articles/:id/edit(.:format)   articles#edit
+#        article GET    /articles/:id(.:format)        articles#show
+#                PATCH  /articles/:id(.:format)        articles#update
+#                PUT    /articles/:id(.:format)        articles#update
+#                DELETE /articles/:id(.:format)        articles#destroy
+#     clickdatas GET    /clickdatas(.:format)          clickdatas#index
+#                POST   /clickdatas(.:format)          clickdatas#create
+#  new_clickdata GET    /clickdatas/new(.:format)      clickdatas#new
+# edit_clickdata GET    /clickdatas/:id/edit(.:format) clickdatas#edit
+#      clickdata GET    /clickdatas/:id(.:format)      clickdatas#show
+#                PATCH  /clickdatas/:id(.:format)      clickdatas#update
+#                PUT    /clickdatas/:id(.:format)      clickdatas#update
+#                DELETE /clickdatas/:id(.:format)      clickdatas#destroy
+#           root GET    /                              welcome#index
+#  welcome_index GET    /welcome/index(.:format)       welcome#index
+#
+
 Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,9 +1,10 @@
 # TCC
 
-##Backend
+##Backend description
 
 * Subindo uma aplicação simples em rails com endpoints(urls que recebem os metodos http para o consumo de dados)
 * [Tutorial](http://guides.rubyonrails.org/getting_started.html)
+* A proposta deste projeto é conseguir capturar o comportamento do usuário em um site
 
 ##Git
 Para mudar o protocolo de comunicação com o github de http(user e senha) para ssh(chave):
@@ -86,6 +87,10 @@ private
 	end
 ```
 
+## Capturing click position with ClickData
+
 * Simulating POST
 
 curl -X POST -d '{"x":"1", "y":"2", "user_token":"124abc", "scroll_position":"444"}' http://localhost:3000/clickdata --header "Content-Type:application/json"
+
+* By far, o js está no arquivo application.js. Verificar!

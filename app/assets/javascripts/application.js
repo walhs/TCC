@@ -14,3 +14,29 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+function print_click(){
+	console.log("x:" + event.clientX);
+	console.log("y:" + event.clientY)
+}
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function cb(result){
+	console.log("Salvei o click: " +  JSON.stringify(result));
+}
+
+function save_click(){
+	var data = {
+		clickdata: {
+			x: event.clientX,
+			y: event.clientY,
+			scroll_position: getRandomInt(0, 1000),
+			user_token: "blablabla123"
+		}
+	};
+
+	$.post('/clickdatas', data, cb)
+}
