@@ -24,19 +24,28 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function cb(result){
+function cb(result) {
 	console.log("Salvei o click: " +  JSON.stringify(result));
 }
+
+function scrollPosition () {
+	return document.body.scrollTop;
+}
+
 
 function save_click(){
 	var data = {
 		clickdata: {
 			x: event.clientX,
 			y: event.clientY,
-			scroll_position: getRandomInt(0, 1000),
-			user_token: "blablabla123"
+			scroll_position: scrollPosition(),
+			user_token: "blablabla123",
+			url: window.location.href
 		}
 	};
 
+	//ajax fazendo post (salvar)
+	//fazendo post para a url de clickdatas. Post = salvando no banco
+	//estou mandando meus dados para a url e o controller dessa url vai saber o que fazer com os dados
 	$.post('/clickdatas', data, cb)
 }

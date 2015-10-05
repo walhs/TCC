@@ -2,7 +2,7 @@
 
 ##Backend description
 
-* Subindo uma aplicação simples em rails com endpoints(urls que recebem os metodos http para o consumo de dados)
+* Subindo uma aplicação simples em rails com endpoints(urls que recebem os metodos http para o consumo de dados). Endpoint é uma entrada para um servidor, um caminho
 * [Tutorial](http://guides.rubyonrails.org/getting_started.html)
 * A proposta deste projeto é conseguir capturar o comportamento do usuário em um site
 

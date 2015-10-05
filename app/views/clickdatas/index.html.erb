@@ -1,4 +1,4 @@
-<h1>Listing Click Datas</h1>
+<h1>Listing Click Datas <%= @clickdatas.length %> clicks </h1>
  
 <table class="table table-bordered">
   <tr>
@@ -7,6 +7,7 @@
     <th>Y</th>
     <th>User token</th>
     <th>Scroll position</th>
+    <th>URL</th>
   </tr>
  
   <% @clickdatas.each do |clickdata| %>
@@ -16,6 +17,7 @@
       <td><%= clickdata.y %></td>
       <td><%= clickdata.user_token %></td>
       <td><%= clickdata.scroll_position %></td>
+      <td><%= clickdata.url %></td>
     </tr>
   <% end %>
 </table>
